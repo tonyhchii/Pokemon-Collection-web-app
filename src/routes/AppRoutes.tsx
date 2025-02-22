@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Login from "../pages/LoginForm";
 import Collections from "../pages/Collections";
 import ProtectedRoute from "../components/ProtectedRoute";
+import CollectionDetails from "../pages/CollectionDetails";
 
 const AppRoutes: React.FC = () => {
   return (
@@ -17,6 +18,10 @@ const AppRoutes: React.FC = () => {
             <Collections />
           </ProtectedRoute>
         }
+      />
+      <Route
+        path="/collections/:collectionId"
+        element={<CollectionDetails />}
       />
     </Routes>
   );

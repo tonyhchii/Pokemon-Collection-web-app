@@ -9,12 +9,13 @@ export interface Card {
   id: string;
   collection_id: number;
   name: string;
+  quantity: number;
   series: string;
   set_name: string;
   set_number: string;
   image_url: string;
   tcgplayer_url: string;
-  prices: Record<string, number | string>;
+  prices: Record<string, number | string>[];
 }
 
 export interface User {

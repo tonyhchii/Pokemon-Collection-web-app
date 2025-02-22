@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Collection } from "../models/types";
 import { getUserCollections, createCollection } from "../services/api";
+import { Link } from "react-router-dom";
 
 const Collections: React.FC = () => {
   const [collections, setCollections] = useState<Collection[]>([]);
@@ -63,7 +64,9 @@ const Collections: React.FC = () => {
 
       <ul>
         {collections.map((collection) => (
-          <li key={collection.id}>{collection.name}</li>
+          <li key={collection.id}>
+            <Link to={`/collections/${collection.id}`}>{collection.name}</Link>
+          </li>
         ))}
       </ul>
     </div>

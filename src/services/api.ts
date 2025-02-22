@@ -114,8 +114,7 @@ export const getCardsInCollection = async (collectionId: string) => {
       `${API_URL}collections/${collectionId}/cards`
     );
 
-    const cards: Card[] = response.data;
-    return cards;
+    return response.data;
   } catch (error) {
     console.error("Error fetching cards from collection:", error);
     throw new Error("Failed to fetch cards from collection");
