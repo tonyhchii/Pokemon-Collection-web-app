@@ -15,7 +15,7 @@ export interface Card {
   set_number: string;
   image_url: string;
   tcgplayer_url: string;
-  prices: Record<string, number | string>[];
+  prices: Record<string, number>[];
 }
 
 export interface User {
