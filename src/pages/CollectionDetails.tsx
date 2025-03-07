@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getCardsInCollection } from "../services/api";
 import { Card } from "../models/types";
-import CardComponent from "../components/cardComponent";
+import CardComponent from "../components/CardComponent";
 
 const CollectionDetails: React.FC = () => {
   const { collectionId } = useParams<{ collectionId: string }>();

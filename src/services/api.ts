@@ -79,18 +79,14 @@ export const addCardToCollection = async (
 };
 
 export const getCards = async (
-  name: string,
-  set: string,
-  series: string,
+  search: string,
   page: number = 1,
-  pageSize: number = 10
+  pageSize: number = 12
 ) => {
   try {
     const response = await axios.get(`${API_URL}cards`, {
       params: {
-        name,
-        set,
-        series,
+        search,
         page,
         pageSize,
       },
